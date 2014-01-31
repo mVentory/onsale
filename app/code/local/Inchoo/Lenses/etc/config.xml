@@ -8,6 +8,12 @@
     </modules>
     
     <global>
+        <blocks>
+            <lenses>
+                <class>Inchoo_Lenses_Block</class>
+            </lenses>
+        </blocks>
+
         <models>
             <lenses>
 				<class>Inchoo_Lenses_Model</class>		
@@ -43,6 +49,14 @@
 	</global>  
 	
 	<adminhtml>
+         <layout>
+            <updates>
+                <lenses>
+                    <file>lenses.xml</file>
+                </lenses>
+            </updates>
+        </layout>
+
 		<events>
 			<catalog_product_new_action>
 			    <observers>
@@ -87,6 +101,11 @@
 			            <class>lenses/observer</class>
 			            <method>hookIntoCatalogProductSaveAfter</method>
 			        </lenses_observer_catalog_product_save_after>
+                	<lenses_observer_catalog_product_save_after_tab>
+			            <type>singleton</type>
+			            <class>lenses/observer</class>
+			            <method>saveProductTabData</method>
+			        </lenses_observer_catalog_product_save_after_tab>
                 </observers>
             </catalog_product_save_after>
             <catalog_product_status_update>
