@@ -19,6 +19,13 @@
 				<class>Inchoo_Lenses_Model</class>		
             </lenses>
         </models>
+
+        <helpers>
+            <inchoo_lenses>
+                <class>Inchoo_Lenses_Helper</class>
+            </inchoo_lenses>
+        </helpers>
+
 	</global>  
 	
 	<adminhtml>

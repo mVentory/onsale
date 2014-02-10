@@ -1,16 +1,38 @@
-<!--<div>-->
-<!--    <div>-->
-<!--        <h4>Custom Tab</h4>-->
-<!--    </div>-->
-<!--    <div id="group_fields4">-->
-<!--        <label for="custom_field">Custom Field</label>-->
-<!--        <input type="text" class="input-text" name="custom_field" id="custom_field" />-->
-<!--    </div>-->
-<!--</div>-->
-<div>
-    <div>
-        <h4>Custom Tab</h4>
+<div class="entry-edit">
+    <div class="entry-edit-head">
+        <h4 class="icon-head head-edit-form fieldset-legend"><?php echo Mage::helper('inchoo_lenses')->__('Customtab') ?></h4>
     </div>
-    <div id="group_fields4">
-    </div>
+
+    <fieldset>
+        <legend><?php echo Mage::helper('inchoo_lenses')->__('Customtab') ?></legend>
+        <table cellspacing="0" class="form-list" id="table_cataloginventory">
+            <tr>
+                <td class="label">Select power</td>
+                <td class="value">
+                    <select name="power" id="power" class="select multiselect" size="20" multiple="multiple">
+                        <?php for($i=-5; $i<=5; $i+=0.25) echo "<option value=" . $i . ">" . $i . "</option>"; ?>
+                    </select>
+                    <p class="note">Hold control or command key to select or deselect multiple values</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">Select diameter</td>
+                <td class="value">
+                    <select name="diameter" id="diameter" class="select multiselect" size="20" multiple="multiple">
+                        <?php for($i=13; $i<=15; $i+=0.2) echo "<option value=" . $i . ">" . $i . "</option>"; ?>
+                    </select>
+                    <p class="note">Hold control or command key to select or deselect multiple values</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">Select base curve</td>
+                <td class="value">
+                    <select name="base_curve" id="base_curve" class="select multiselect" size="20" multiple="multiple">
+                        <?php for($i=5; $i>=0; $i-=0.25) echo "<option value=" . $i . ">" . $i . "</option>"; ?>
+                    </select>
+                    <p class="note">Hold control or command key to select or deselect multiple values</p>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
 </div>

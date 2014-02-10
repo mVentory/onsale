@@ -11,7 +11,13 @@ implements Mage_Adminhtml_Block_Widget_Tab_Interface {
     public function _construct()
     {
         parent::_construct();
-         
+
+        // @TODO: get attribute set name, depending on it's name, load different template e.g. spherical, toric and multifocal lenses
+//        $attributeSetName = Mage::getModel('eav/entity_attribute_set')->load($_product->getAttributeSetId())->getAttributeSetName();
+//        if(0 == strcmp($attributeSetName, 'My Attribute Set') {
+//                print $product->getAttributeText('attribute');
+//        }
+//
         $this->setTemplate('inchoo/lenses/tab.phtml');
     }
      

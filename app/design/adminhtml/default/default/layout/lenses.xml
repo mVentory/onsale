@@ -3,7 +3,7 @@
     <adminhtml_catalog_product_simple>
         <reference name="product_tabs">
             <action method="addTab">
-                <name>Inchoo_Dependencies_Tab</name>
+                <name>inchoo_lenses_tab</name>
                 <block>lenses/adminhtml_catalog_product_tab</block>
             </action>
         </reference>
