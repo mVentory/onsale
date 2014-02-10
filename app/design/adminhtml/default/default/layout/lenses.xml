@@ -1,19 +1,11 @@
 <?xml version="1.0"?>
 <layout>
-    <adminhtml_catalog_product_edit>
+    <adminhtml_catalog_product_simple>
         <reference name="product_tabs">
             <action method="addTab">
-                <name>my_custom_tab</name>
+                <name>Inchoo_Dependencies_Tab</name>
                 <block>lenses/adminhtml_catalog_product_tab</block>
             </action>
         </reference>
-    </adminhtml_catalog_product_edit>
-    <adminhtml_catalog_product_new>
-        <reference name="product_tabs">
-            <action method="addTab">
-                <name>my_custom_tab</name>
-                <block>lenses/adminhtml_catalog_product_tab</block>
-            </action>
-        </reference>
-    </adminhtml_catalog_product_new>
+    </adminhtml_catalog_product_simple>
 </layout>

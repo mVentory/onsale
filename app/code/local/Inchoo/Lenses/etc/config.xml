@@ -18,34 +18,7 @@
             <lenses>
 				<class>Inchoo_Lenses_Model</class>		
             </lenses>
-        </models>    
-        
-        <resources>
-            <lenses_setup>
-                <setup>
-                    <module>Inchoo_Lenses</module>
-                    <class>Mage_Catalog_Model_Resource_Eav_Mysql4_Setup</class>
-                </setup>
-                <connection>
-                    <use>core_setup</use>
-                </connection>
-            </lenses_setup>
-		</resources>        
-        
-        <catalog>
-            <product>
-                <type>
-                    <lenses translate="label" module="catalog">
-                        <label>Lenses</label>
-                        <model>lenses/product_type_cp</model>
-                        <is_qty>1</is_qty>
-                        <index_data_retreiver>lenses/catalogIndex_data_cp</index_data_retreiver>
-                        <price_model>lenses/product_price</price_model>
-                        <composite>0</composite>
-                    </lenses>
-                </type>
-			</product>        
-        </catalog>
+        </models>
 	</global>  
 	
 	<adminhtml>

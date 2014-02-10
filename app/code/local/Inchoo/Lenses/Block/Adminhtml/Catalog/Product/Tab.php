@@ -22,7 +22,7 @@ implements Mage_Adminhtml_Block_Widget_Tab_Interface {
      */
     public function getTabLabel()
     {
-        return $this->__('My Custom Tab');
+        return $this->__('Dependencies');
     }
      
     /**
