@@ -18,6 +18,10 @@
             <lenses>
 				<class>Inchoo_Lenses_Model</class>		
             </lenses>
+
+            <lenses_adminhtml>
+                <class>Inchoo_Lenses_Adminhtml_Model</class>
+            </lenses_adminhtml>
         </models>
 
         <helpers>
@@ -203,5 +207,17 @@
             </catalog_product_collection_load_after>
 		</events>
 	</adminhtml>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <inchoo_lenses after="Mage_Adminhtml">Inchoo_Lenses_Adminhtml</inchoo_lenses>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
 	  
 </config>
