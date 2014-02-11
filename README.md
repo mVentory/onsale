@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Magento Ticketing System
 =======
 
@@ -22,6 +21,3 @@ System/config
 Tables
 * Add a column that corresponds to store id where the ticket was created (inchoo_ticketing_ticket.store_id), comments will automatically fall back accoring to ticket ID that is unique in all our stores, and comments are linked to tickets with a FK
 =======
-lenses
-======
->>>>>>> 0c1b900158d0d50452e90d40e3984bdfd15a933a
