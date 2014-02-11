@@ -1,17 +1,22 @@
+<?php
+    $setId=Mage::registry('setId');
+    $setName=Mage::helper('inchoo_lenses')->getAttributeSetNameById($setId);
+?>
 <div class="entry-edit">
     <div class="entry-edit-head">
-        <h4 class="icon-head head-edit-form fieldset-legend"><?php echo Mage::helper('inchoo_lenses')->__('Available options') ?></h4>
+        <h4 class="icon-head head-edit-form fieldset-legend">
+            <?php echo $setName; ?>
+        </h4>
     </div>
-
     <fieldset>
-        <legend><?php echo Mage::helper('inchoo_lenses')->__('Available options') ?></legend>
+        <legend><?php echo $setName; ?></legend>
         <table cellspacing="0" class="form-list" id="table_cataloginventory">
             <tr>
                 <td class="label">Select power</td>
                 <td class="value">
                     <select name="power" id="power" class="select multiselect" size="20" multiple="multiple">
                         <?php for($i=-5; $i<=5; $i+=0.25) echo "<option value=" . $i . " selected=\"selected\">" . $i . "</option>"; ?>
-<!--                        TODO: instantiate values from somewhere (allow admin to specify maximum range?) instead of fixed values using $i ? -->
+<!--                        @TODO: instantiate values from somewhere (allow admin to specify maximum range?) instead of fixed values using ? -->
                     </select>
                     <p class="note">Hold control or command key to select or deselect multiple values</p>
                 </td>

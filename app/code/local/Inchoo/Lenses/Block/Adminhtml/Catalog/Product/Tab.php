@@ -18,7 +18,14 @@ implements Mage_Adminhtml_Block_Widget_Tab_Interface {
 //                print $product->getAttributeText('attribute');
 //        }
 //
-        $this->setTemplate('inchoo/lenses/tab.phtml');
+        $setId = Mage::app()->getRequest()->getParam('set');
+        Mage::register('setId', $setId);
+
+        //if lenses, load lenses template
+        if($setId==63) $this->setTemplate('inchoo/lenses/lenses.phtml');
+
+        // @TODO: if glasses, load glasses template
+//        if($setId==63) $this->setTemplate('inchoo/lenses/glasses.phtml');
     }
      
     /**
@@ -26,6 +33,7 @@ implements Mage_Adminhtml_Block_Widget_Tab_Interface {
      *
      * @return string
      */
+
     public function getTabLabel()
     {
         return $this->__('Dependencies');
