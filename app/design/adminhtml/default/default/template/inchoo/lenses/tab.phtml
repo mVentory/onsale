@@ -1,16 +1,17 @@
 <div class="entry-edit">
     <div class="entry-edit-head">
-        <h4 class="icon-head head-edit-form fieldset-legend"><?php echo Mage::helper('inchoo_lenses')->__('Customtab') ?></h4>
+        <h4 class="icon-head head-edit-form fieldset-legend"><?php echo Mage::helper('inchoo_lenses')->__('Available options') ?></h4>
     </div>
 
     <fieldset>
-        <legend><?php echo Mage::helper('inchoo_lenses')->__('Customtab') ?></legend>
+        <legend><?php echo Mage::helper('inchoo_lenses')->__('Available options') ?></legend>
         <table cellspacing="0" class="form-list" id="table_cataloginventory">
             <tr>
                 <td class="label">Select power</td>
                 <td class="value">
                     <select name="power" id="power" class="select multiselect" size="20" multiple="multiple">
-                        <?php for($i=-5; $i<=5; $i+=0.25) echo "<option value=" . $i . ">" . $i . "</option>"; ?>
+                        <?php for($i=-5; $i<=5; $i+=0.25) echo "<option value=" . $i . " selected=\"selected\">" . $i . "</option>"; ?>
+<!--                        TODO: instantiate values from somewhere (allow admin to specify maximum range?) instead of fixed values using $i ? -->
                     </select>
                     <p class="note">Hold control or command key to select or deselect multiple values</p>
                 </td>
@@ -19,7 +20,7 @@
                 <td class="label">Select diameter</td>
                 <td class="value">
                     <select name="diameter" id="diameter" class="select multiselect" size="20" multiple="multiple">
-                        <?php for($i=13; $i<=15; $i+=0.2) echo "<option value=" . $i . ">" . $i . "</option>"; ?>
+                        <?php for($i=13; $i<=15; $i+=0.2) echo "<option value=" . $i . " selected=\"selected\">" . $i . "</option>"; ?>
                     </select>
                     <p class="note">Hold control or command key to select or deselect multiple values</p>
                 </td>
@@ -28,7 +29,7 @@
                 <td class="label">Select base curve</td>
                 <td class="value">
                     <select name="base_curve" id="base_curve" class="select multiselect" size="20" multiple="multiple">
-                        <?php for($i=5; $i>=0; $i-=0.25) echo "<option value=" . $i . ">" . $i . "</option>"; ?>
+                        <?php for($i=5; $i>=0; $i-=0.25) echo "<option value=" . $i . " selected=\"selected\">" . $i . "</option>"; ?>
                     </select>
                     <p class="note">Hold control or command key to select or deselect multiple values</p>
                 </td>
