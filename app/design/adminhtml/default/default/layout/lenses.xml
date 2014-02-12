@@ -7,5 +7,72 @@
                 <block>lenses/adminhtml_catalog_product_tab</block>
             </action>
         </reference>
+        <reference name="product_tabs">
+            <action method="addTab">
+                <name>inchoo_lenses_matrix_tab</name>
+                <block>lenses/adminhtml_catalog_product_matrix</block>
+            </action>
+        </reference>
     </adminhtml_catalog_product_simple>
+
+
+    <!---->
+    <!--<reference name="product_tabs">-->
+        <!--<action method="addTab">-->
+            <!--<name>inchoo_lenses_matrix</name>-->
+            <!--<block>lenses/adminhtml_catalog_product_matrix</block>-->
+        <!--</action>-->
+    <!--</reference>-->
+<!--</adminhtml_catalog_product_simple>-->
+
+    <!--<adminhtml_catalog_product_matrix>-->
+        <!--<block type="core/text_list" name="root" output="toHtml">-->
+            <!--<block type="adminhtml/catalog_product_matrix_grid" name="catalog.product.matrix_grid"/>-->
+            <!--<block type="adminhtml/widget_grid_serializer" name="matrix_grid_serializer">-->
+                <!--<reference name="matrix_grid_serializer">-->
+                    <!--<action method="initSerializerBlock">-->
+                        <!--<grid_block_name>catalog.product.matrix</grid_block_name>-->
+                        <!--<data_callback>getSelectedMatrixProducts</data_callback>-->
+                        <!--<hidden_input_name>links[matrix]</hidden_input_name>-->
+                        <!--<reload_param_name>products_matrix</reload_param_name>-->
+                    <!--</action>-->
+                    <!--<action method="addColumnInputName">-->
+                        <!--<input_name>position</input_name>-->
+                    <!--</action>-->
+                <!--</reference>-->
+            <!--</block>-->
+        <!--</block>-->
+    <!--</adminhtml_catalog_product_matrix>-->
+
+    <!--<adminhtml_catalog_product_matrixgrid>-->
+        <!--<block type="core/text_list" name="root" output="toHtml">-->
+            <!--<block type="adminhtml/catalog_product_matrix_grid" name="catalog.product.matrix"/>-->
+        <!--</block>-->
+    <!--</adminhtml_catalog_product_matrixgrid>-->
+
+
+    <!--<adminhtml_catalog_product_upsell>-->
+        <!--<block type="core/text_list" name="root" output="toHtml">-->
+            <!--<block type="adminhtml/catalog_product_edit_tab_upsell" name="catalog.product.edit.tab.upsell"/>-->
+            <!--<block type="adminhtml/widget_grid_serializer" name="upsell_grid_serializer">-->
+                <!--<reference name="upsell_grid_serializer">-->
+                    <!--<action method="initSerializerBlock">-->
+                        <!--<grid_block_name>catalog.product.edit.tab.upsell</grid_block_name>-->
+                        <!--<data_callback>getSelectedUpsellProducts</data_callback>-->
+                        <!--<hidden_input_name>links[upsell]</hidden_input_name>-->
+                        <!--<reload_param_name>products_upsell</reload_param_name>-->
+                    <!--</action>-->
+                    <!--<action method="addColumnInputName">-->
+                        <!--<input_name>position</input_name>-->
+                    <!--</action>-->
+                <!--</reference>-->
+            <!--</block>-->
+        <!--</block>-->
+    <!--</adminhtml_catalog_product_upsell>-->
+
+    <!--<adminhtml_catalog_product_upsellgrid>-->
+        <!--<block type="core/text_list" name="root" output="toHtml">-->
+            <!--<block type="adminhtml/catalog_product_edit_tab_upsell" name="catalog.product.edit.tab.upsell"/>-->
+        <!--</block>-->
+    <!--</adminhtml_catalog_product_upsellgrid>-->
 </layout>
