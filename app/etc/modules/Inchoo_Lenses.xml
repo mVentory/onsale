@@ -3,7 +3,7 @@
 <config>
     <modules>
         <Inchoo_Lenses>
-            <active>true</active>
+            <active>false</active>
             <codePool>local</codePool>
         </Inchoo_Lenses>
     </modules>
