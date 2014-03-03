@@ -57,7 +57,7 @@ if(isset($param) && $param==='1'){
             ->load();
 
     // this loads the standard magento catalog proce rule model
-    $rules = Mage::getResourceModel('catalogrule/rule')->load();
+    $rules = Mage::getResourceModel('catalogrule/rule_collection')->load();
 
 
     // read: if there are active rules
