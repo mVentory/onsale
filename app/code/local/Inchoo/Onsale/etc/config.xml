@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Inchoo_Onsale>
+            <version>1.0.0.3</version>
+        </Inchoo_Onsale>
+    </modules>
+    <global>
+       <helpers>
+            <inchoo_onsale>
+                <class>Inchoo_Onsale_Helper</class>
+            </inchoo_onsale>
+        </helpers>
+
+        <models>
+            <inchoo_onsale>
+                <class>Inchoo_Onsale_Model</class>
+            </inchoo_onsale>
+        </models>
+
+        <events>
+            <catalog_product_collection_load_before>
+                <observers>
+                    <inchoo_onsale_observer>
+                        <type>singleton</type>
+                        <class>inchoo_onsale/observer</class>
+                        <method>getOnSaleCollection</method>
+                    </inchoo_onsale_observer>
+                </observers>
+            </catalog_product_collection_load_before>
+        </events>
+    </global>
+</config>
