@@ -30,4 +30,14 @@
             </catalog_product_collection_load_before>
         </events>
     </global>
+
+    <frontend>
+        <layout>
+            <updates>
+                <customrelated>
+                    <file>inchoo/onsale.xml</file>
+                </customrelated>
+            </updates>
+        </layout>
+    </frontend>
 </config>
