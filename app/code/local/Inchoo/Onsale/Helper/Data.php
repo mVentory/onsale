@@ -2,7 +2,7 @@
 
 class Inchoo_Onsale_Helper_Data extends Mage_Core_Helper_Abstract
 {
-    public function getOnSaleUrla()
+    public function getOnSaleUrl()
     {
         $url = Mage::getUrl('', array(
             '_current' => true,
