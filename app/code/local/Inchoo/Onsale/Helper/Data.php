@@ -1,5 +1,6 @@
 <?php
 
+
 class Inchoo_Onsale_Helper_Data extends Mage_Core_Helper_Abstract
 {
     public function getOnSaleUrl()
