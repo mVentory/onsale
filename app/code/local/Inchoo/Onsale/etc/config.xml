@@ -6,7 +6,7 @@
         </Inchoo_Onsale>
     </modules>
     <global>
-       <helpers>
+        <helpers>
             <inchoo_onsale>
                 <class>Inchoo_Onsale_Helper</class>
             </inchoo_onsale>
