@@ -32,62 +32,10 @@
  */
 ?>
 <?php
+
+/* inchoo start*/
     $param = Mage::app()->getRequest()->getParam('sale');
-
-if(isset($param) && $param==='1'){
-    /* inchoo start */
-    $today  = Mage::app()->getLocale()->date()->toString(Varien_Date::DATETIME_INTERNAL_FORMAT);
-    $tomorrow = date('m/d/y', mktime(0, 0, 0, date('m'), date('d')+1, date('y')));
-    $_productCollection=
-        $this->getLoadedProductCollection()
-            ->clear()
-            ->addAttributeToFilter('special_price', array('neq' => ""))
-            ->addAttributeToFilter('special_from_date', array('date' => true, 'to' => $today))
-            ->addAttributeToFilter(array(
-                                       array(
-                                           'attribute' => 'special_to_date',
-                                           'date' => true,
-                                           'from' => $tomorrow
-                                       ),
-                                       array(
-                                           'attribute' => 'special_to_date',
-                                           'null' => 1
-                                       )
-                                   ))
-            ->load();
-
-    // this loads the standard magento catalog proce rule model
-    $rules = Mage::getResourceModel('catalogrule/rule_collection')->load();
-
-
-    // read: if there are active rules
-    if($rules->getData()) {
-        $productIds[] = array(); // this will hold the ids of the products
-
-        foreach($rules as $rule) {
-            $productIds = $rule->getMatchingProductIds(); // affected products come in here
-        }
-
-        // merge the collections: $arr is an array and keeps all product IDs we fetched before with the special-price-stuff
-        $arr = $_productCollection->getAllIds();
-        if($productIds) {
-        // if there are products affected by catalog price rules, $arr now also keeps their IDs
-            $arr = array_merge($arr,$productIds);
-        }
-
-        // we initialize a new collection and filter solely by the product IDs we got before, read: select all products with their entity_id in $arr
-        $_productCollection = $this->getLoadedProductCollection()
-                                  ->addAttributeToFilter('entity_id',array('in'=>$arr))
-                                  ->load();
-
-
-    }
-}else{
-
-    $_productCollection=$this->getLoadedProductCollection();
-
-}
-
+    $_productCollection=$this->getOnSaleCollection();
 /* inchoo end*/
     $_helper = $this->helper('catalog/output');
 ?>
