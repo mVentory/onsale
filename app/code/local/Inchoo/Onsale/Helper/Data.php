@@ -13,7 +13,7 @@ class Inchoo_Onsale_Helper_Data extends Mage_Core_Helper_Abstract
         return $url;
     }
 
-    public function getNotOnSaleUrl(a)
+    public function getNotOnSaleUrl()
     {
         $url = Mage::getUrl('', array(
             '_current' => true,
