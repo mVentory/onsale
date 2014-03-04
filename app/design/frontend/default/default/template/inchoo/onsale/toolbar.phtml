@@ -31,7 +31,9 @@
      * @see Mage_Catalog_Block_Product_List_Toolbar
      */
 ?>
+<!--inchoo start-->
 <?php $helper = Mage::helper('inchoo_onsale'); ?>
+<!--inchoo end-->
 
 <?php if($this->getCollection()->getSize()): ?>
     <div class="toolbar">
@@ -92,7 +94,7 @@
                         <a href="<?php echo $this->getOrderUrl(null, 'desc') ?>" title="<?php echo $this->__('Set Descending Direction') ?>"><img src="<?php echo $this->getSkinUrl('images/i_asc_arrow.gif') ?>" alt="<?php echo $this->__('Set Descending Direction') ?>" class="v-middle" /></a>
 
 
-                        <!--            inchoo start-->
+                <!--inchoo start-->
                         <label for="sale"><?php echo $this->__('On Sale') ?></label>
                         <input name="sale" id="sale" type="checkbox"
                             value="<?php
@@ -104,7 +106,7 @@
                                     echo $helper->getOnSaleUrl();
                                 endif;
                             ?>" autocomplete="off" onchange="setLocation(this.value)"/>
-                        <!--            inchoo end-->
+                <!--inchoo end-->
 
 
                     <?php endif; ?>
