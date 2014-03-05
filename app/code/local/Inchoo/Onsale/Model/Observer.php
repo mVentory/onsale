@@ -7,7 +7,7 @@ class Inchoo_Onsale_Model_Observer
         $param = Mage::app()->getRequest()->getParam('sale');
 
         $event = $observer->getEvent();
-        $collection = $event->getCollection();
+        $collection = $event->getCollection()->addFinalPrice();
 
         if(isset($param) && $param==='1'){
             $collection ->getSelect()
