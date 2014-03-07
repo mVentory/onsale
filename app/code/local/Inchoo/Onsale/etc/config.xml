@@ -6,39 +6,29 @@
         </Inchoo_Onsale>
     </modules>
     <global>
+        <blocks>
+            <inchoo_onsale>
+                <class>Inchoo_Onsale_Block</class>
+            </inchoo_onsale>
+        </blocks>
         <helpers>
             <inchoo_onsale>
                 <class>Inchoo_Onsale_Helper</class>
             </inchoo_onsale>
         </helpers>
-
         <models>
             <inchoo_onsale>
                 <class>Inchoo_Onsale_Model</class>
             </inchoo_onsale>
         </models>
-
     </global>
-
     <frontend>
         <layout>
             <updates>
-                <customrelated>
+                <onsale>
                     <file>inchoo/onsale.xml</file>
-                </customrelated>
+                </onsale>
             </updates>
         </layout>
-
-        <events>
-            <catalog_product_collection_load_before>
-                <observers>
-                    <inchoo_onsale_observer>
-                        <type>singleton</type>
-                        <class>inchoo_onsale/observer</class>
-                        <method>getOnSaleCollection</method>
-                    </inchoo_onsale_observer>
-                </observers>
-            </catalog_product_collection_load_before>
-        </events>
     </frontend>
 </config>
