@@ -14,6 +14,8 @@ class Inchoo_Onsale_Helper_Data extends Mage_Core_Helper_Abstract
             )
         ));
 
+        $url = Mage::getModel('core/url')->sessionUrlVar($url);
+
         return $url;
     }
 
@@ -27,6 +29,8 @@ class Inchoo_Onsale_Helper_Data extends Mage_Core_Helper_Abstract
                 'p' => NULL
             )
         ));
+
+        $url = Mage::getModel('core/url')->sessionUrlVar($url);
 
         return $url;
     }
